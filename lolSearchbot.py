@@ -46,7 +46,7 @@ warnings.filterwarnings(action='ignore')
 bot = commands.Bot(command_prefix='!')
 
 opggsummonersearch = 'https://www.op.gg/summoner/userName='
-bottoken = 'NzQ4MzYwOTQ2NDk3NDg2OTQy.X0cTcQ.uJmCtOxHCV3CRUAuhNm_pedoy0o'
+bottoken = ''
 
 '''
 Simple Introduction about asyncio
@@ -270,5 +270,5 @@ async def on_message(message): # on_message() event : when the bot has recieved 
             await message.channel.send("Error : Non existing Summoner ", embed=embed)
 
 
-
-client.run(bottoken)
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
